@@ -1,0 +1,44 @@
+
+-----------------------------------------------------------------
+  pg_upgrade run on Thu Nov  9 17:26:49 2017
+-----------------------------------------------------------------
+
+
+-----------------------------------------------------------------
+  pg_upgrade run on Thu Nov  9 17:27:13 2017
+-----------------------------------------------------------------
+
+
+-----------------------------------------------------------------
+  pg_upgrade run on Thu Nov  9 17:28:35 2017
+-----------------------------------------------------------------
+
+
+-----------------------------------------------------------------
+  pg_upgrade run on Thu Nov  9 17:29:14 2017
+-----------------------------------------------------------------
+
+command: "/usr/local/Cellar/postgresql/9.3.5_1/bin/pg_ctl" -w -l "pg_upgrade_server.log" -D "/usr/local/var/postgres92" -o "-p 50432 -c autovacuum=off -c autovacuum_freeze_max_age=2000000000  -c listen_addresses='' -c unix_socket_permissions=0700" start >> "pg_upgrade_server.log" 2>&1
+pg_ctl: another server might be running; trying to start server anyway
+waiting for server to start....LOG:  database system was interrupted; last known up at 2015-02-03 13:15:30 AEST
+LOG:  database system was not properly shut down; automatic recovery in progress
+LOG:  record with zero length at 0/17B4960
+LOG:  redo is not required
+LOG:  database system is ready to accept connections
+ done
+server started
+
+
+command: "/usr/local/Cellar/postgresql/9.3.5_1/bin/pg_ctl" -w -D "/usr/local/var/postgres92" -o "" -m smart stop >> "pg_upgrade_server.log" 2>&1
+waiting for server to shut down....LOG:  received smart shutdown request
+LOG:  shutting down
+LOG:  database system is shut down
+ done
+server stopped
+
+
+
+-----------------------------------------------------------------
+  pg_upgrade run on Thu Nov  9 17:29:51 2017
+-----------------------------------------------------------------
+
